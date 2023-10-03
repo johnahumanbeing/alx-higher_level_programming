@@ -9,5 +9,4 @@ def uppercase(str):
         else:
             char = ord(char)
         print("{:c}".format(char), end="")
-        # print a new line after all chars are in uppercase
     print()
