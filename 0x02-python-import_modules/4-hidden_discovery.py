@@ -5,4 +5,4 @@ if __name__ == "__main__":
     modyule = dir(hidden_4)
     for name in modyule:
         if name[0:2] != "__":
-            print("{:s}".format(modyule))
+            print("{:s}".format(name))
