@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 import sys
-
 if __name__ == "__main__":
     argv = sys.argv[1:]
     n_args = len(argv)
-
     if n_args == 0:
         print("{:d} arguments.".format(0))
     elif n_args == 1:
