@@ -3,7 +3,7 @@ import sys
 
 if __name__ == "__main__":
     argv = sys.argv[1:]
-    n_args = len(argv)  # n_args is number of arguments
+    n_args = len(argv)
 
     if n_args == 0:
         print("{:d} arguments.".format(0))
