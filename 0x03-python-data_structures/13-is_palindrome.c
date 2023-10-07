@@ -3,7 +3,6 @@
 /**
  * reverse_list - reverses a linked list
  * @head: pointer to the head of the list
- *
  * Return: pointer to the new head of the reversed list
  */
 void reverse_list(listint_t **head)
@@ -24,7 +23,6 @@ void reverse_list(listint_t **head)
 /**
  * is_palindrome - checks if a linked list is a palindrome
  * @head: pointer to the head of the linked list
- *
  * Return: 1 if it is a palindrome else 0
  */
 int is_palindrome(listint_t **head)
