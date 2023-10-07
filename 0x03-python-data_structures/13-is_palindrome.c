@@ -1,57 +1,31 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * reverse_list - reverses a linked list
- * @head: pointer to the head of the list
- * Return: pointer to the new head of the reversed list
- */
-void reverse_list(listint_t **head)
-{
-	listint_t *current, *prev = NULL, *next_node;
-
-	current = *head;
-	while (current)
-	{
-		next_node = current->next;
-		current->next = prev;
-		prev = current;
-		current = next_node;
-	}
-	*head = prev;
-}
-
-/**
- * is_palindrome - checks if a linked list is a palindrome
- * @head: pointer to the head of the linked list
- * Return: 1 if it is a palindrome else 0
+ * is_palindrome - checks if a singly linked list is a palindrome
+ * @head: double pointer to the head of the list
+ * Return: 1 if palindrome else 0
  */
 int is_palindrome(listint_t **head)
 {
-	int length, i, j;
-	listint_t *temp, *mid_node;
+	listint_t *current = *head;
+	int array[2048], i = 0, j;
 
-	temp = *head;
-	if (!temp || !temp->next)
+	if (*head == NULL)
 		return (1);
 
-	for (length = 0; temp; length++, temp = temp->next)
-		;
-
-	mid_node = *head;
-	j = (length % 2 == 0) ? (length / 2) : (length / 2) + 1;
-
-	for (i = 0; i < j; i++)
-		mid_node = mid_node->next;
-
-	reverse_list(&mid_node);
-
-	temp = *head;
-	for (i = 0; i < j; i++)
+	while (current != NULL)
 	{
-		if (temp->n != mid_node->n)
+		array[i] = current->n;
+		current = current->next;
+		i++;
+	}
+
+	for (j = 0; j < i / 2; j++)
+	{
+		if (array[j] != array[i - j - 1])
 			return (0);
-		temp = temp->next;
-		mid_node = mid_node->next;
 	}
 
 	return (1);
