@@ -7,7 +7,7 @@
  *
  * Return: zero
  */
-void print_python_list_info(PyObject *p)
+void print_python_list_info(PyObject * p)
 {
 	Py_ssize_t size = PyList_Size(p);
 	Py_ssize_t i;
