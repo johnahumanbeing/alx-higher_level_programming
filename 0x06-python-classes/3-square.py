@@ -1,16 +1,14 @@
 #!/usr/bin/python3
 class Square:
-    '''
-    A class that defines a Square.
-
+    '''A class that defines a Square.
+    
     Attributes:
     __size (int): The size of the square (private).
     '''
 
     def __init__(self, size=0):
-        '''
-        Function that initializes a new instance of a Square class.
-
+        '''Function that initializes a new instance of a Square class.
+        
         args:
         size (int): The size of the square (default 0).
 
@@ -26,7 +24,5 @@ class Square:
             self.__size = size
 
     def area(self):
-        '''
-        Function that returns the area of the square.
-        '''
+        '''Function that returns the area of the square'''
         return self.__size ** 2
