@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 class Square:
     '''
-    A class that defines a Square
+    A class that defines a Square.
 
     Attributes:
     __size (int): The size of the square (private).
@@ -27,9 +27,6 @@ class Square:
 
     def area(self):
         '''
-        calculates area of the square.
-
-        Returns:
-        int: the area of the square.
+        Function that returns the area of the square.
         '''
         return self.__size ** 2
