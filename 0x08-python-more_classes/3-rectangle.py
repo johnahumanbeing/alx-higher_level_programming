@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Defining a class rectangle"""
+"""
+Defining a class rectangle
+"""
 
 
 class Rectangle():
@@ -13,6 +15,7 @@ class Rectangle():
     Raises:
         TypeError with msg 'width must be an integer'
         TypeError with msg 'height must be an integer'
+
         ValueError with msg 'width must be >= 0'
         ValueError with msg 'height must be >= 0'
     """
@@ -22,6 +25,7 @@ class Rectangle():
 
     @property
     def width(self):
+        """width attribute"""
         return self.__width
 
     @width.setter
@@ -34,6 +38,7 @@ class Rectangle():
 
     @property
     def height(self):
+        """height attribute"""
         return self.__height
 
     @height.setter
@@ -45,12 +50,14 @@ class Rectangle():
         self.__height = value
 
     def area(self):
+        """function that returns area of a rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
+        """prints a rectangle with character #"""
         if self.__width == 0 or self.__height == 0:
             return ""
         rectangle = ""
