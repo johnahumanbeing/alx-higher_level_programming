@@ -6,7 +6,7 @@ Defining a class rectangle
 
 class Rectangle():
     """
-    Defiition of the class rectangle
+    Defining the class rectangle
 
     Args:
         width: default 0
@@ -20,16 +20,18 @@ class Rectangle():
         ValueError with msg 'height must be >= 0'
     """
     def __init__(self, width=0, height=0):
+        """Initialize Rectangle attributes"""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """width attribute"""
+        """Width attribute getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Width attribute setter"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -38,11 +40,12 @@ class Rectangle():
 
     @property
     def height(self):
-        """height attribute"""
+        """Height attribute getter"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Height attribute setter"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -50,17 +53,31 @@ class Rectangle():
         self.__height = value
 
     def area(self):
-        """function that returns area of a rectangle"""
+        """function that returns the rectangle area"""
         return self.__width * self.__height
 
     def perimeter(self):
+        """function that returns the rectangle
+            perimeter
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
         return 2 * (self.__width + self.__height)
 
-    def __str__(self):
-        """prints a rectangle with character #"""
+    def print(self):
+        """prints a rectangle with the character #"""
         if self.__width == 0 or self.__height == 0:
-            return ""
-        rectangle = ""
-        for _ in range(self.__height):
-            rectangle += "#" * self.__width + "\n"
-        return rectangle
+            return
+        for i in range(0, self.__height):
+            [print("#", end="") for j in range(0, self.__width)]
+            if i < self.__height - 1:
+                print()
+
+    def __str__(self):
+        """prints a rectangle with the character #"""
+        if self.__width != 0 and self.__height != 0:
+            for i in range(0, self.__height):
+                [print("#", end="") for j in range(0, self.__width)]
+                if i < self.__height - 1:
+                    print()
+        return ""
