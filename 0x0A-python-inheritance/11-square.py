@@ -15,7 +15,8 @@ class Square(Rectangle):
         """
         Initializes a new Square instance.
         """
-        super().__init__(size, size)
+        self.integer_validator("size", size)
+        Rectangle.__init__(self, size, size)
 
     def __str__(self):
         """
