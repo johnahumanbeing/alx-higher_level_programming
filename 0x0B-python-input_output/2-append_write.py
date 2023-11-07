@@ -13,4 +13,4 @@ def append_write(filename="", text=""):
     with open(filename, "a+", encoding="utf-8") as file:
         file.write(text)
         file.seek(0, 2)
-        return file.tell()
+        return file.write(text)
