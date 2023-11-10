@@ -1,0 +1,79 @@
+#!/usr/bin/python3
+"""Define class Rectangle"""
+
+from models.base import Base
+
+
+class Rectangle(Base):
+    """Defining class Rectangle
+
+    Attributes:
+        width: rectanles width (requirement)
+        height: rectangles height (requirement)
+        x (int): x-coordinate of rectangle (default 0)
+        y (int): y-coordinate of rectangle (default 0)
+    """
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """Initializes new instance of class rectangle
+
+        Args:
+            width (int): rectangles width
+            height (int): rectangles height
+            x (int): x-coordinate of rectangle (default 0)
+            y (int): y-coordinate of rectangle (default 0)
+            id (int): optional to assign
+        """
+        Base.__init__(self, id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+
+    @property
+    def width(self):
+        """Returns width of rectangle"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Setter for width atrribute"""
+        self.__width = value
+
+    @property
+    def height(self):
+        """Getter for height attribute"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """Setter for height atribute"""
+        self.__height = value
+
+    @property
+    def x(self):
+        """
+        Returns:
+            int: The x-coordinate of the rectangle.
+        """
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """
+        Setter for the x attribute.
+        """
+        self.__x = value
+
+    @property
+    def y(self):
+        """
+        Returns: int: The y-coordinate of the rectangle.
+        """
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """
+        Args: value (int): The new value for the y-coordinate of the rectangle.
+        """
+        self.__y = value
