@@ -133,3 +133,8 @@ class Rectangle(Base):
         if len(args) == 0 and len(kwargs) > 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """the dictionary of the rectangle"""
+        return {"id": self.id, "width": self.width, "height": self.height,
+                "x": self.x, "y": self.y}
