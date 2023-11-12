@@ -41,3 +41,17 @@ class Square(Rectangle):
     @Rectangle.height.setter
     def height(self, value):
         self.size = value
+
+    def update(self, *args, **kwargs):
+        """
+        Args:
+            *args: list of non-keyworded arguments
+            **kwargs: Dictionary for the keyword arguments
+        """
+        if args:
+            attrs = ["id", "size", "x", "y"]
+            for j, arg in enumerate(args):
+                setattr(self, attrs[j], arg)
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
