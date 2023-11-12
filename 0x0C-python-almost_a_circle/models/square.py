@@ -14,7 +14,7 @@ class Square(Rectangle):
         y (int): y-cooredinate of the square
     """
 
-    def __ibit__(self, size, x=0, y=0, id=None):
+    def __init__(self, size, x=0, y=0, id=None):
         """Initializes instance of the class square"""
         super().__init__(size, size, x, y, id)
 
@@ -33,3 +33,11 @@ class Square(Rectangle):
         """Returns a string rep of the square"""
         return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width)
+
+    @Rectangle.width.setter
+    def width(self, value):
+        self.size = value
+
+    @Rectangle.height.setter
+    def height(self, value):
+        self.size = value
