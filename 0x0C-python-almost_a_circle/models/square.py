@@ -34,14 +34,15 @@ class Square(Rectangle):
             *args: list of non-keyworded arguments
             **kwargs: Dictionary for the keyword arguments
         """
-        if args:
+        if args is not None and len(args) != 0:
             attrs = ["id", "size", "x", "y"]
-            for j, arg in enumerate(args):
-                setattr(self, attrs[j], arg)
-        elif kwargs:
+            for i in range(len(args)):
+                setattr(self, attrs[i], args[i])
+        else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """dictionary for the square"""
-        return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
+        """returns the dictionary representation of a Square"""
+        attrs = ["id", "size", "x", "y"]
+        return {attr: getattr(self, attr) for attr in attrs}
