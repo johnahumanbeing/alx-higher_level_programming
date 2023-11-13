@@ -18,30 +18,15 @@ class Square(Rectangle):
         """Initializes instance of the class square"""
         super().__init__(size, size, x, y, id)
 
+    def __str__(self):
+        """Returns a representation of the square"""
+        return "[Square] (" + str(self.id) + ")" + str(self.x) + "/" \
+            + str(self.y) + " - " + str(self.width)
+
     @property
     def size(self):
         """Getter for size attribute"""
         return self.width
-
-    @size.setter
-    def size(self, value):
-        """Setter for the size attribute"""
-        self.width = value
-        self.height = value
-
-    def __str__(self):
-        """Returns a string rep of the square"""
-        return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.width)
-
-    @property
-    def size(self):
-        return self.width
-
-    @size.setter
-    def size(self, value):
-        self.width = value
-        self.height = value
 
     def update(self, *args, **kwargs):
         """
