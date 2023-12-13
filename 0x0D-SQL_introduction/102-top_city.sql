@@ -1,0 +1,7 @@
+-- script that displays avg temp
+SELECT city, AVG(value) AS avg_temp
+FROM temperatures
+WHERE 
+month IN (7, 8)
+GROUP BY cityORDER BY avg_temp DESC
+LIMIT 3;
