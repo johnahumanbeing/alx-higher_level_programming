@@ -4,7 +4,7 @@
 
 | Task | File |
 | ---- | ---- |
-| 0. Get all states | [0-select_states.py]
+| 0. Get all states | 0-select_states.py
 | 1. Filter states | [1-filter_states.py]
 | 2. Filter states by user input | [2-my_filter_states.py]
 | 3. SQL Injection... | [3-my_safe_filter_states.py]
