@@ -18,4 +18,4 @@
 | 11. Add a new state | [11-model_state_insert.py]
 | 12. Update a state | [12-model_state_update_id_2.py]
 | 13. Delete states | [13-model_state_delete_a.py]
-| 14. Cities in state | [model_city.py](./model_city.py), [14-model_city_fetch_by_state.py]
+| 14. Cities in state | [model_city.py]
