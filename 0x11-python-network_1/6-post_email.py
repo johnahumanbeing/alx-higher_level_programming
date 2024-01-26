@@ -9,5 +9,6 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    response = requests.post(sys.argv[1], data={'email': sys.argv[2]})
-    print(response.txt)
+    res1 = {"email": sys.argv[2]}
+    response = requests.post(sys.argv[1], data=res1)
+    print(response.text)
