@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 script that takes and prints the 10 latest commits from a github repo
-usage: ./100-github_commits.py <repo owner>
+usage: ./100-github_commits.py <repo owner> <user>
 """
 
 from sys import argv
